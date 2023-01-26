@@ -19,7 +19,7 @@ $ https://github.com/sinansarikaya/javascript-todos-app.git
 
 ### Demo
 
-#### [View Demo](https://sinansarikaya.github.io/javascript-todos-app/)
+#### [View Demo](https://salonee-jain.github.io/TodoList/)
 
 
 <hr />
