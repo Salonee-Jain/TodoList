@@ -4,7 +4,7 @@ An easy-to-use to-do list tool that lets you mark and unmark things to indicate 
 
 
 ## View app at
-demohttps://toomuchtudu.netlify.app
+#### [View Demo](https://salonee-jain.github.io/TodoList/)
 
 
 <hr />
@@ -12,14 +12,14 @@ demohttps://toomuchtudu.netlify.app
 ### Installation Options
 
 ```
-$ https://github.com/sinansarikaya/javascript-todos-app.git
+`https://github.com/Salonee-Jain/TodoList.git`
 ```
 
 <hr />
 
-### Demo
 
-#### [View Demo](https://salonee-jain.github.io/TodoList/)
+
+
 
 
 <hr />
