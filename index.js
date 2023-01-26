@@ -1,13 +1,12 @@
 var todoList = []
-
-
+var comdoList = [];
+var remList = [];
 var addButton = document.getElementById("add-button")
 var todoInput = document.getElementById("todo-input")
 var deleteAllButton = document.getElementById("delete-all")
 var allTodos = document.getElementById("all-todos");
 var deleteSButton = document.getElementById("delete-selected")
-var comdoList=[];
-var remList =[];
+
 
 
 addButton.addEventListener("click", add)
@@ -22,13 +21,13 @@ document.addEventListener('click', (e) => {
         deleteTodo(e)
     }
 
-    if (e.target.id=="all"){
+    if (e.target.id == "all") {
         viewAll();
     }
-    if (e.target.id=="rem"){
+    if (e.target.id == "rem") {
         viewRemaining();
     }
-    if (e.target.id=="com"){
+    if (e.target.id == "com") {
         viewCompleted();
     }
 
@@ -41,21 +40,18 @@ document.addEventListener('keypress', (e) => {
 
 
 
-function update(){
-    comdoList = todoList.filter((ele)=>{
+function update() {
+    comdoList = todoList.filter((ele) => {
         return ele.complete
-        
+
     })
-    remList = todoList.filter((ele)=>{
-        return !ele.complete})
+    remList = todoList.filter((ele) => {
+        return !ele.complete
+    })
     document.getElementById("r-count").innerText = todoList.length.toString();
     document.getElementById("c-count").innerText = comdoList.length.toString();
 
 }
-
-
-
-
 
 
 function add() {
@@ -72,16 +68,17 @@ function add() {
 
     todoInput.value = ""
 
-    
+
     update();
     addinmain(todoList);
 }
+
 
 function addinmain(todoList) {
     allTodos.innerHTML = ""
     todoList.forEach(element => {
         var x = `<li id=${element.id} class="todo-item">
-    <p id="task"> ${element.complete?`<strike>${element.task}</strike>`:element.task} </p>
+    <p id="task"> ${element.complete ? `<strike>${element.task}</strike>` : element.task} </p>
     <div class="todo-actions">
                 <button class="complete btn btn-success">
                     <i class=" ci bx bx-check bx-sm"></i>
@@ -98,11 +95,11 @@ function addinmain(todoList) {
 
 
 function deleteTodo(e) {
-    var deleted= e.target.parentElement.parentElement.getAttribute('id');
-    todoList = todoList.filter((ele)=>{
-        return ele.id!=deleted
+    var deleted = e.target.parentElement.parentElement.getAttribute('id');
+    todoList = todoList.filter((ele) => {
+        return ele.id != deleted
     })
-    
+
     update();
     addinmain(todoList);
 
@@ -112,58 +109,58 @@ function completeTodo(e) {
     var completed = e.target.parentElement.parentElement.getAttribute('id');
     todoList.forEach((obj) => {
         if (obj.id == completed) {
-            if(obj.complete == false)
-            {
+            if (obj.complete == false) {
                 obj.complete = true
+                console.log(e.target.parentElement.parentElement)
+
                 e.target.parentElement.parentElement.querySelector("#task").classList.add("line");
-            }else{
+            } else {
                 obj.complete = false
+
                 e.target.parentElement.parentElement.querySelector("#task").classList.remove("line");
             }
-            // var c2 = `<s>${obj.task}</s>`
-            // e.target.parentElement.parentElement.querySelector(".task").innerHTML = c2;
-          
-            
-         
-           
+
+
+
+
         }
     })
 
     update();
-    addinmain(todoList);   
+    addinmain(todoList);
 }
 
 function deleteAll(todo) {
 
     todoList = []
-    
+
     update();
     addinmain(todoList);
-    
+
 }
 
 
 function deleteS(todo) {
 
-    todoList = todoList.filter((ele)=>{
+    todoList = todoList.filter((ele) => {
         return !ele.complete;
     })
-    
-    
+
+
     update();
     addinmain(todoList);
-    
+
 }
 
-
-function viewCompleted(){
+// functions for filters
+function viewCompleted() {
     addinmain(comdoList);
 }
 
-function viewRemaining(){
+function viewRemaining() {
 
     addinmain(remList);
 }
-function viewAll(){
+function viewAll() {
     addinmain(todoList);
 }

@@ -39,6 +39,7 @@ body{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 20px;
 }
+/* header */
 
 .container header {
     display: flex;
@@ -56,20 +57,8 @@ header h1 {
     color: rgb(68, 68, 68);
 }
 
-.alert-message{
-    width: 100%;
-    transition: all 0.3s ease;
-    transform: scale(0.9);
-}
 
-.alert-message.show{
-    display: block;
-    transform: scale(1);
-}
-
-.alert-message.hide{
-    display: none;
-}
+/* input-section */
 
 header .input-section {
     width: 100%;
@@ -81,10 +70,29 @@ header .input-section {
     height: 100%;
 }
 
-.input-section input{
+.input-section input {
     margin-right: 10px;
     max-width: 100%;
 }
+.max-w-xs {
+    max-width: 20rem;
+}
+.w-full {
+    width: 100%;
+}
+
+.input {
+    border-radius: 0.5rem;
+    height: 3rem;
+    border-width: 1px;
+    flex-shrink: 1;
+   padding: 0rem 1rem;
+    font-size: .875rem;
+    line-height: 2;
+   
+}
+
+/* todofilters */
 
 .todos-filter, .filters {
     display: flex;
@@ -152,6 +160,8 @@ header .input-section {
     text-decoration: line-through;
 }
 
+
+/*buttons styling*/
 .btn{
     cursor: pointer;
     user-select: none;
@@ -181,28 +191,6 @@ header .input-section {
 .btn:hover{
     background-color: rgb(108, 109, 110);
     color: white;
-}
-
-.input-section input {
-    margin-right: 10px;
-    max-width: 100%;
-}
-.max-w-xs {
-    max-width: 20rem;
-}
-.w-full {
-    width: 100%;
-}
-
-.input {
-    border-radius: 0.5rem;
-    height: 3rem;
-    border-width: 1px;
-    flex-shrink: 1;
-   padding: 0rem 1rem;
-    font-size: .875rem;
-    line-height: 2;
-   
 }
 
 
