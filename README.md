@@ -21,6 +21,5 @@ $ https://github.com/sinansarikaya/javascript-todos-app.git
 
 #### [View Demo](https://sinansarikaya.github.io/javascript-todos-app/)
 
-![JavaScript Student Data](./img/demo.jpeg)
 
 <hr />
