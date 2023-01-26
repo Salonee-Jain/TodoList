@@ -152,6 +152,7 @@ function deleteS(todo) {
 
 }
 
+
 // functions for filters
 function viewCompleted() {
     addinmain(comdoList);
