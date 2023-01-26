@@ -12,14 +12,7 @@ An easy-to-use to-do list tool that lets you mark and unmark things to indicate 
 ### Installation Options
 
 ```
-`https://github.com/Salonee-Jain/TodoList.git`
+https://github.com/Salonee-Jain/TodoList.git
 ```
-
-<hr />
-
-
-
-
-
 
 <hr />
