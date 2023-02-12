@@ -19,6 +19,3 @@ or
 Simply download the Zip File and run on your system
 <hr />
 
-
-### Preview of the app
-  ![Preview](assets/preview.png "a title")
