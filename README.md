@@ -21,4 +21,4 @@ Simply download the Zip File and run on your system
 
 
 ### Preview of the app
-  <img src="assets/preview.png" alt="">
+  ![Preview](assets/preview.png "a title")
