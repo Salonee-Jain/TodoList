@@ -19,3 +19,6 @@ or
 Simply download the Zip File and run on your system
 <hr />
 
+
+### Preview of the app
+ ![preview](https://user-images.githubusercontent.com/65110262/218327358-279c9355-db52-4f30-9a77-3538faba928a.png)
