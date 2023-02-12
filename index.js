@@ -8,11 +8,13 @@ var allTodos = document.getElementById("all-todos");
 var deleteSButton = document.getElementById("delete-selected")
 
 
-
+//event listners for add and delete
 addButton.addEventListener("click", add)
 deleteAllButton.addEventListener("click", deleteAll)
 deleteSButton.addEventListener("click", deleteS)
 
+
+//event listeners for filtersk
 document.addEventListener('click', (e) => {
     if (e.target.className.split(' ')[0] == 'complete' || e.target.className.split(' ')[0] == 'ci') {
         completeTodo(e);
@@ -32,6 +34,7 @@ document.addEventListener('click', (e) => {
     }
 
 })
+//event listner for enter key
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         add();
@@ -39,7 +42,7 @@ document.addEventListener('keypress', (e) => {
 });
 
 
-
+//updates the all the remaining, completed and main list
 function update() {
     comdoList = todoList.filter((ele) => {
         return ele.complete
@@ -53,6 +56,7 @@ function update() {
 
 }
 
+//adds the task in main list
 
 function add() {
     var value = todoInput.value;
@@ -74,6 +78,8 @@ function add() {
 }
 
 
+//renders the main list and views on the main content
+
 function addinmain(todoList) {
     allTodos.innerHTML = ""
     todoList.forEach(element => {
@@ -94,6 +100,7 @@ function addinmain(todoList) {
 }
 
 
+//deletes and indiviual task and update all the list
 function deleteTodo(e) {
     var deleted = e.target.parentElement.parentElement.getAttribute('id');
     todoList = todoList.filter((ele) => {
@@ -105,6 +112,7 @@ function deleteTodo(e) {
 
 }
 
+//completes indiviaula task and updates all the list
 function completeTodo(e) {
     var completed = e.target.parentElement.parentElement.getAttribute('id');
     todoList.forEach((obj) => {
@@ -120,9 +128,6 @@ function completeTodo(e) {
                 e.target.parentElement.parentElement.querySelector("#task").classList.remove("line");
             }
 
-
-
-
         }
     })
 
@@ -130,6 +135,8 @@ function completeTodo(e) {
     addinmain(todoList);
 }
 
+
+//deletes all the tasks
 function deleteAll(todo) {
 
     todoList = []
@@ -139,7 +146,7 @@ function deleteAll(todo) {
 
 }
 
-
+//deletes only completed task
 function deleteS(todo) {
 
     todoList = todoList.filter((ele) => {
